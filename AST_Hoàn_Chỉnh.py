@@ -1,15 +1,6 @@
 """ SPI - Simple Pascal Interpreter """
 
-###############################################################################
-#                                                                             #
-#  LEXER                                                                      #
-#                                                                             #
-###############################################################################
 
-# Token types
-#
-# EOF (end-of-file) token is used to indicate that
-# there is no more input left for lexical analysis
 INTEGER, PLUS, MINUS, MUL, DIV, LPAREN, RPAREN, EOF = (
     'INTEGER', 'PLUS', 'MINUS', 'MUL', 'DIV', '(', ')', 'EOF'
 )
@@ -112,11 +103,6 @@ class Lexer(object):
         return Token(EOF, None)
 
 
-###############################################################################
-#                                                                             #
-#  PARSER                                                                     #
-#                                                                             #
-###############################################################################
 
 class AST(object):
     pass
@@ -204,11 +190,6 @@ class Parser(object):
         return self.expr()
 
 
-###############################################################################
-#                                                                             #
-#  INTERPRETER                                                                #
-#                                                                             #
-###############################################################################
 
 class NodeVisitor(object):
     def visit(self, node):
